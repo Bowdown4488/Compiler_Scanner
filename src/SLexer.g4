@@ -1,4 +1,3 @@
-// Name our lexer (the name must match the filename)
 lexer grammar SLexer;
 
 // Define string values - either unquoted or quoted
@@ -12,8 +11,8 @@ WS : [ \t\r\n]+ -> skip ;
 LINE_COMMENT : '//' ~[\r\n]* '\r'? '\n' -> skip ;
 
 // Define punctuations
-LPAREN : '<' ;
-RPAREN : '>' ;
+LPAREN : '(' ;
+RPAREN : ')' ;
 EQUALS : '=' ;
 SEMICO : ';' ;
 ASSIGN : ':=' ;
