@@ -16,3 +16,5 @@ RPAREN : ')' ;
 EQUALS : '=' ;
 SEMICO : ';' ;
 ASSIGN : ':=' ;
+LBRACK:  '{' ;
+RBRACK:  '}' ;

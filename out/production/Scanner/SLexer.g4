@@ -13,6 +13,8 @@ LINE_COMMENT : '//' ~[\r\n]* '\r'? '\n' -> skip ;
 // Define punctuations
 LPAREN : '(' ;
 RPAREN : ')' ;
+LBRACK:  '{' ;
+RBRACK:  '}' ;
 EQUALS : '=' ;
 SEMICO : ';' ;
 ASSIGN : ':=' ;

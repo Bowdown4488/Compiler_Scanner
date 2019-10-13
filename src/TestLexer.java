@@ -25,18 +25,24 @@ public class TestLexer {
         switch (tokenType) {
             case SLexer.STRING:
                 if (findKeyword(tokenString)){
-                    return "KEYWORD";
+                    return "Keywoard";
+                }else{
+                    return "String";
                 }
             case SLexer.LPAREN:
-                return "LPAREN";
+                return "Separators";
             case SLexer.RPAREN:
-                return "RPAREN";
+                return "Separators";
+            case SLexer.LBRACK:
+                return "Separators";
+            case SLexer.RBRACK:
+                return "Separators";
             case SLexer.EQUALS:
-                return "EQUALS";
+                return "Operator";
             case SLexer.SEMICO:
-                return "SEMICO";
+                return "Separators";
             case SLexer.ASSIGN:
-                return "ASSIGN";
+                return "Operator";
             default:
                 return "OTHER";
         }
@@ -45,7 +51,6 @@ public class TestLexer {
         for(int i=0;i<keywords.length;i++){
             if(s.equals(keywords[i]))
                 return true;
-
         }
         return false;
     }

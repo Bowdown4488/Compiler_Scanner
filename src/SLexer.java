@@ -17,7 +17,7 @@ public class SLexer extends Lexer {
 		new PredictionContextCache();
 	public static final int
 		STRING=1, WS=2, LINE_COMMENT=3, LPAREN=4, RPAREN=5, EQUALS=6, SEMICO=7, 
-		ASSIGN=8;
+		ASSIGN=8, LBRACK=9, RBRACK=10;
 	public static String[] channelNames = {
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
 	};
