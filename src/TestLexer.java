@@ -24,7 +24,6 @@ public class TestLexer {
             tokentypes.add(getTokenType(token.getType(),token.getText()));
             token = lexer.nextToken();
         }
-        System.out.println(tokens.size()+" "+tokentypes.size());
         for(int i = 0;i<tokentypes.size();i++){
 
             if(tokentypes.get(i).equals("String")){
