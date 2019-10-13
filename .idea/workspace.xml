@@ -3,7 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="5c8d07d2-24af-4258-9b0f-7b2fb7087324" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/SLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/gen/SLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/SLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/gen/SLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gen/SLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/gen/SLexer.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scanner/SLexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Scanner/SLexer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scanner/SLexer.g4" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Scanner/SLexer.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scanner/SLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Scanner/SLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scanner/SLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Scanner/SLexer.tokens" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SLexer.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/SLexer.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/SLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/SLexer.tokens" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TestLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestLexer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
     </list>
@@ -63,6 +73,8 @@
       <option name="presentableId" value="Default" />
       <updated>1570980581338</updated>
       <workItem from="1570980586573" duration="4909000" />
+      <workItem from="1570986087411" duration="1695000" />
+      <workItem from="1570988229424" duration="1642000" />
     </task>
     <servers />
   </component>
@@ -74,7 +86,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

@@ -15,7 +15,7 @@ public class TestLexer {
 
         Token token = lexer.nextToken();
         while (token.getType() != SLexer.EOF) {
-            System.out.println("\t" + getTokenType(token.getType(),token.getText()) + "\t\t" + token.getText());
+            System.out.println("\t" + token.getText() + "\t\t\t\t"  + getTokenType(token.getType(),token.getText()));
             token = lexer.nextToken();
         }
     }
@@ -25,7 +25,7 @@ public class TestLexer {
         switch (tokenType) {
             case SLexer.STRING:
                 if (findKeyword(tokenString)){
-                    return "Keywoard";
+                    return "Keyword";
                 }else{
                     return "String";
                 }
@@ -42,6 +42,76 @@ public class TestLexer {
             case SLexer.SEMICO:
                 return "Separators";
             case SLexer.ASSIGN:
+                return "Operator";
+            case SLexer.LESSTN:
+                return "Operator";
+            case SLexer.GESSTN:
+                return "Operator";
+            case SLexer.NOTOPN:
+                return "Operator";
+            case SLexer.APPROX:
+                return "Operator";
+            case SLexer.OPTION:
+                return "Operator";
+            case SLexer.COLON:
+                return "Operator";
+            case SLexer.DEQUAL:
+                return "Operator";
+            case SLexer.LEQUAL:
+                return "Operator";
+            case SLexer.GEQUAL:
+                return "Operator";
+            case SLexer.NEQUAL:
+                return "Operator";
+            case SLexer.ANDD:
+                return "Operator";
+            case SLexer.ORR:
+                return "Operator";
+            case SLexer.INCR:
+                return "Operator";
+            case SLexer.DECR:
+                return "Operator";
+            case SLexer.ADD:
+                return "Operator";
+            case SLexer.MINUS:
+                return "Operator";
+            case SLexer.TIMES:
+                return "Operator";
+            case SLexer.DIVIDE:
+                return "Operator";
+            case SLexer.AND:
+                return "Operator";
+            case SLexer.OR:
+                return "Operator";
+            case SLexer.EXP:
+                return "Operator";
+            case SLexer.PERC:
+                return "Operator";
+            case SLexer.DLEFT:
+                return "Operator";
+            case SLexer.RIGHT:
+                return "Operator";
+            case SLexer.QRIGHT:
+                return "Operator";
+            case SLexer.PEQUAL:
+                return "Operator";
+            case SLexer.MEQUAL:
+                return "Operator";
+            case SLexer.TEQUAL:
+                return "Operator";
+            case SLexer.SEQUAL:
+                return "Operator";
+            case SLexer.AEQUAL:
+                return "Operator";
+            case SLexer.OEQUAL:
+                return "Operator";
+            case SLexer.EEQUAL:
+                return "Operator";
+            case SLexer.REQUAL:
+                return "Operator";
+            case SLexer.DLEQUAL:
+                return "Operator";
+            case SLexer.DRQUAL:
                 return "Operator";
             default:
                 return "OTHER";

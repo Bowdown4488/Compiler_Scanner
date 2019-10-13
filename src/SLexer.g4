@@ -1,6 +1,5 @@
 lexer grammar SLexer;
 
-// Define string values - either unquoted or quoted
 STRING : ('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'@')+ |
          ('"' (~('"' | '\\' | '\r' | '\n') | '\\' ('"' | '\\'))* '"') ;
 
@@ -10,7 +9,7 @@ WS : [ \t\r\n]+ -> skip ;
 // Skip comments
 LINE_COMMENT : '//' ~[\r\n]* '\r'? '\n' -> skip ;
 
-// Define punctuations
+// Separators and Operators
 LPAREN : '(' ;
 RPAREN : ')' ;
 EQUALS : '=' ;
@@ -18,3 +17,39 @@ SEMICO : ';' ;
 ASSIGN : ':=' ;
 LBRACK:  '{' ;
 RBRACK:  '}' ;
+LESSTN:  '<' ;
+GESSTN:  '>' ;
+NOTOPN:  '!' ;
+APPROX:  '~' ;
+OPTION:  '?' ;
+COLON:  ':' ;
+DEQUAL:  '==';
+LEQUAL:  '<=';
+GEQUAL:  '>=';
+NEQUAL:  '!=';
+ANDD:  '&&';
+ORR:   '||';
+INCR: '++';
+DECR: '--';
+ADD: '+';
+MINUS: '-';
+TIMES: '*';
+DIVIDE: '/';
+AND: '&';
+OR: '|';
+EXP: '^';
+PERC: '%';
+DLEFT: '<<';
+RIGHT: '>>';
+QRIGHT: '>>>>';
+PEQUAL: '+=';
+MEQUAL: '-=';
+TEQUAL: '*=';
+SEQUAL: '/=';
+AEQUAL: '&=';
+OEQUAL: '|=';
+EEQUAL: '^=';
+REQUAL: '%=';
+DLEQUAL: '<<=';
+DRQUAL: '>>=';
+
