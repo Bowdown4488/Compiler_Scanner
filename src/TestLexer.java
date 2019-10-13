@@ -15,15 +15,17 @@ public class TestLexer {
 
         Token token = lexer.nextToken();
         while (token.getType() != SLexer.EOF) {
-            System.out.println("\t" + getTokenType(token.getType()) + "\t\t" + token.getText());
+            System.out.println("\t" + getTokenType(token.getType(),token.getText()) + "\t\t" + token.getText());
             token = lexer.nextToken();
         }
     }
 
-    private static String getTokenType(int tokenType) {
+    private static String getTokenType(int tokenType,String tokenString) {
         switch (tokenType) {
             case SLexer.STRING:
-                return "STRING";
+                if (tokenString.equals("abstrakto")){
+                    return "KEYWOARD";
+                }
             case SLexer.LPAREN:
                 return "LPAREN";
             case SLexer.RPAREN:
