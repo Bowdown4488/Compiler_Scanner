@@ -19,12 +19,13 @@ public class TestLexer {
             token = lexer.nextToken();
         }
     }
-
+    static String[] keywords = {"abstrakto","boorean","bureko","byto","kesu","katchu","karu","kurasu","konst","kontinu","deporuto","do","doburu","erusu","enumu","extendo","finar","finarri","furoto","foru","ifu","iku","impremento","importo","insutaof","into","intefeseru","rongu","netivu","newu","pakeju","privatto","protekto","pubriko","returno","shorto","statiku","strictofp","supa","switchu","sinkuronaizu","disu","throwu","throwsu","transento","tryu","boido","voratiru","wairu"};
     private static String getTokenType(int tokenType,String tokenString) {
+
         switch (tokenType) {
             case SLexer.STRING:
-                if (tokenString.equals("abstrakto")){
-                    return "KEYWOARD";
+                if (findKeyword(tokenString)){
+                    return "KEYWORD";
                 }
             case SLexer.LPAREN:
                 return "LPAREN";
@@ -39,5 +40,13 @@ public class TestLexer {
             default:
                 return "OTHER";
         }
+    }
+    private static boolean findKeyword(String s){
+        for(int i=0;i<keywords.length;i++){
+            if(s.equals(keywords[i]))
+                return true;
+
+        }
+        return false;
     }
 }
