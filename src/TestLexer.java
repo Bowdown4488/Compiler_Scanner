@@ -24,8 +24,9 @@ public class TestLexer {
             tokentypes.add(getTokenType(token.getType(),token.getText()));
             token = lexer.nextToken();
         }
-        for(int i = 0;i<tokentypes.size();i++){
 
+        for(int i = 0;i<tokentypes.size();i++){
+            /*
             if(tokentypes.get(i).equals("String")){
                 boolean identifier = false;
                 if(i-1>=0){
@@ -42,6 +43,7 @@ public class TestLexer {
                 else
                     tokentypes.set(i,"Literal");
             }
+            */
             System.out.println("\t" + tokens.get(i).getText() + "\t\t\t\t"  +tokentypes.get(i));
         }
 
@@ -51,6 +53,8 @@ public class TestLexer {
     private static String getTokenType(int tokenType,String tokenString) {
 
         switch (tokenType) {
+            case SLexer.KEYWORD:
+                return "Keyword";
             case SLexer.STRING:
                 if (findKeyword(tokenString)){
                     return "Keyword";
