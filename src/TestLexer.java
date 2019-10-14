@@ -24,26 +24,28 @@ public class TestLexer {
             tokentypes.add(getTokenType(token.getType(),token.getText()));
             token = lexer.nextToken();
         }
-        for(int i = 0;i<tokentypes.size();i++){
 
-            if(tokentypes.get(i).equals("String")){
-                boolean identifier = false;
-                if(i-1>=0){
-                    if(tokentypes.get(i-1).equals("Keyword")){
-                        identifier = true;
-                    }
-                }else if(i+1!=tokens.size()){
-                    if(tokentypes.get(i+1).equals("String"))
-                        identifier = true;
-                }
-
-                if(identifier)
-                    tokentypes.set(i,"Identifier");
-                else
-                    tokentypes.set(i,"Literal");
-            }
-            System.out.println("\t" + tokens.get(i).getText() + "\t\t\t\t"  +tokentypes.get(i));
-        }
+//        for(int i = 0;i<tokentypes.size();i++){
+//            /*
+//            if(tokentypes.get(i).equals("String")){
+//                boolean identifier = false;
+//                if(i-1>=0){
+//                    if(tokentypes.get(i-1).equals("Keyword")){
+//                        identifier = true;
+//                    }
+//                }else if(i+1!=tokens.size()){
+//                    if(tokentypes.get(i+1).equals("String"))
+//                        identifier = true;
+//                }
+//
+//                if(identifier)
+//                    tokentypes.set(i,"Identifier");
+//                else
+//                    tokentypes.set(i,"Literal");
+//            }
+//            */
+//            System.out.println("\t" + tokens.get(i).getText() + "\t\t\t\t"  +tokentypes.get(i));
+//        }
 
 
     }
@@ -51,17 +53,15 @@ public class TestLexer {
     private static String getTokenType(int tokenType,String tokenString) {
 
         switch (tokenType) {
-            case SLexer.STRING:
-                if (findKeyword(tokenString)){
-                    return "Keyword";
-                }else{
-                    return "String";
-                }
+            case SLexer.KEYWORD:
+                System.out.println("\t" +  tokenString + "\t\t" + "Keyword");
+                return "Keyword";
             case SLexer.LPAREN:
             case SLexer.RPAREN:
             case SLexer.LBRACK:
             case SLexer.RBRACK:
             case SLexer.SEMICO:
+                System.out.println("\t" +  tokenString + "\t\t" + "Separator");
                 return "Separator";
             case SLexer.EQUALS:
             case SLexer.ASSIGN:
@@ -100,16 +100,32 @@ public class TestLexer {
             case SLexer.REQUAL:
             case SLexer.DLEQUAL:
             case SLexer.DRQUAL:
+                System.out.println("\t" +  tokenString + "\t\t" + "Operator");
                 return "Operator";
+            case SLexer.Identifier:
+                System.out.println("\t" +  tokenString + "\t\t" + "Identifier");
+                return "Identifier";
+            case SLexer.BooleanLiteral:
+            case SLexer.CharacterLiteral:
+            case SLexer.FloatingPointLiteral:
+            case SLexer.IntegerLiteral:
+            case SLexer.StringLiteral:
+            case SLexer.NullLiteral:
+                System.out.println("\t" +  tokenString + "\t\t" + "Literal");
+                return "Literal";
+            case SLexer.LINE_COMMENT:
+                System.out.println("\t" +  tokenString + "\t\t" + "Comment");
+                return "Comment ";
             default:
-                return "OTHER";
+                System.out.println("\t" +  tokenString + "\t\t" + "Other");
+                return "Other";
         }
     }
-    private static boolean findKeyword(String s){
-        for(int i=0;i<keywords.length;i++){
-            if(s.equalsIgnoreCase(keywords[i]))
-                return true;
-        }
-        return false;
-    }
+//    private static boolean findKeyword(String s){
+//        for(int i=0;i<keywords.length;i++){
+//            if(s.equalsIgnoreCase(keywords[i]))
+//                return true;
+//        }
+//        return false;
+//    }
 }

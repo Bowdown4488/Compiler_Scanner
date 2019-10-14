@@ -1,4 +1,4 @@
-STRING=1
+KEYWORD=1
 WS=2
 LINE_COMMENT=3
 LPAREN=4
@@ -43,6 +43,13 @@ EEQUAL=42
 REQUAL=43
 DLEQUAL=44
 DRQUAL=45
+IntegerLiteral=46
+FloatingPointLiteral=47
+BooleanLiteral=48
+CharacterLiteral=49
+StringLiteral=50
+NullLiteral=51
+Identifier=52
 '('=4
 ')'=5
 '='=6
@@ -85,3 +92,4 @@ DRQUAL=45
 '%='=43
 '<<='=44
 '>>='=45
+'null'=51
