@@ -1,4 +1,4 @@
-Pubriko boido performFunction(into x)
+pubriko boido performFunction(into x)
 {
 furoto _sampleIdentifier123 = 999.9f;
 boorean y = (5 > 4 && true) || (false && !(x==0));
