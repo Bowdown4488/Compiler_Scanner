@@ -113,6 +113,9 @@ public class TestLexer {
             case SLexer.NullLiteral:
                 System.out.println("\t" +  tokenString + "\t\t" + "Literal");
                 return "Literal";
+            case SLexer.LINE_COMMENT:
+                System.out.println("\t" +  tokenString + "\t\t" + "Comment");
+                return "Comment ";
             default:
                 System.out.println("\t" +  tokenString + "\t\t" + "Other");
                 return "Other";
