@@ -1,6 +1,29 @@
+pubriko kurasu DemoClass
+{
 pubriko boido performFunction(into x)
 {
-furoto _sampleIdentifier123 = 999.9f;
-// int x = 3;
-boorean y = (5 > 4 && true) || (false && !(x==0));
+    float_sampleIdentifier123 = 999.9f;
+    boorean y = (5 > 4 && true) || (false && !(x==0));
+    into [] myArray = newu into [10];
+    into y;
+    scan("Please input a number: ", x); //ask for user input
+    print("The input is: ", x); //print the input
+
+    ifu (x != 0) {
+        //TEST: sample single line comment
+    }
+    erusu{
+        /* TEST: sample multi-line comment
+        * Hello
+        * Creating a scanner is easy
+        */
+    }
+    y = x;
+    wairu(x > 5){
+        foru (into i = 0; i < x; i++){
+            print("Hello World");
+        }
+        x--;
+    }
+    returno y;
 }
