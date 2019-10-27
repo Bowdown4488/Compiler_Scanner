@@ -2,16 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c8d07d2-24af-4258-9b0f-7b2fb7087324" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scanner/SLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Scanner/SLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Scanner/SLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Scanner/SLexer.tokens" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Scanner/TestLexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Scanner/TestLexer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SLexer.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/SLexer.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/SLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/SLexer.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestLexer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="209" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,6 +37,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Paolo\IdeaProjects\Compiler_Scanner\src" />
       <recent name="D:\Baya\CMPILER\Compiler_Scanner\src" />
     </key>
   </component>
@@ -76,6 +85,7 @@
       <workItem from="1571054106664" duration="1119000" />
       <workItem from="1571056197040" duration="956000" />
       <workItem from="1571889545199" duration="23000" />
+      <workItem from="1572163536217" duration="3017000" />
     </task>
     <servers />
   </component>
@@ -108,5 +118,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Compiler_Scanner$TestLexer.ic" NAME="TestLexer Coverage Results" MODIFIED="1572166517275" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

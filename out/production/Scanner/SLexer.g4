@@ -1,7 +1,32 @@
 //lexer grammar SLexer;
 lexer grammar SLexer;
 
-/*
+KEYWORD: ABSTRACT | BOOLEAN | BREAK | BYTE | CASE | CATCH | CHAR | CLASS | CONST | CONTINUE | DEFAULT | DO | DOUBLE |
+         ELSE | ENUM | EXTENDS | FINAL | FINALLY | FLOAT | FOR | IF | GOTO | IMPLEMENTS | IMPORT | INSTANCEOF | INT |
+         INTERFACE | LONG | NATIVE | NEW | PACKAGE | PRIVATE | PROTECTED | PUBLIC | RETURN | SHORT | STATIC | STRICTFP |
+         SUPER | SWITCH | SYNCHRONIZED | THIS | THROW | THROWS | TRANSIENT | TRY | VOID | VOLATILE | WHILE;
+
+//STRING : ('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'@'|'.')+ |
+//         ('"' (~('"' | '\\' | '\r' | '\n') | '\\' ('"' | '\\'))* '"') ;
+
+SEPARATOR: LPAREN | RPAREN | LBRACE | RBRACE | LBRACK | RBRACK | SEMI | COMMA | DOT;
+
+OPERATOR: ASSIGN | GT | LT | BANG | TILDE | QUESTION | COLON | EQUAL | LE | GE | NOTEQUAL | AND | OR | INC | DEC | ADD |
+          SUB | MUL | DEC | BITAND | BITOR | CARET | MOD | ARROW | COLONCOLON | ADD_ASSIGN | SUB_ASSIGN | MUL_ASSIGN
+          DIV_ASSIGN | AND_ASSIGN | OR_ASSIGN | XOR_ASSIGN | MOD_ASSIGN | LSHIFT_ASSIGN | RSHIFT_ASSIGN | URSHIFT_ASSIGN;
+
+LITERAL: DecimalIntegerLiteral | HexIntegerLiteral | OctalIntegerLiteral | BinaryIntegerLiteral | BooleanLiteral |
+         CharacterLiteral | DecimalFloatingPointLiteral | FloatingPointLiteral | HexadecimalFloatingPointLiteral |
+         NullLiteral | StringLiteral;
+
+// Skip all spaces, tabs, newlines
+WS : [ \t\r\n]+ -> skip ;
+
+// Skip comments
+LINE_COMMENT : '//' ~[\r\n]* '\r'? '\n' -> skip ;
+
+// §3.9 Keywords
+
 ABSTRACT : 'abstrakto';
 BOOLEAN : 'boorean';
 BREAK : 'bureko';
@@ -51,61 +76,6 @@ TRY : 'tryu';
 VOID : 'boido';
 VOLATILE : 'voratiru';
 WHILE : 'wairu';
-*/
-KEYWORD: 'abstrakto'|'boorean'|'bureko'|'byto'|'kesu'|'katchu'|'karu'|'kurasu'|'konst'|'kontinu'|'deporuto'|'do'|'doburu'|'erusu'|'enumu'|'extendo'|'finar'|'finarri'|'furoto'|'foru'|'ifu'|'iku'|'impremento'|'importo'|'insutaof'|'into'|'intefeseru'|'rongu'|'netivu'|'newu'|'pakeju'|'privatto'|'protekto'|'pubriko'|'returno'|'shorto'|'statiku'|'strictofp'|'supa'|'switchu'|'sinkuronaizu'|'disu'|'throwu'|'throwsu'|'transento'|'tryu'|'boido'|'voratiru'|'wairu';
-
-//STRING : ('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'@'|'.')+ |
-//         ('"' (~('"' | '\\' | '\r' | '\n') | '\\' ('"' | '\\'))* '"') ;
-
-// Skip all spaces, tabs, newlines
-WS : [ \t\r\n]+ -> skip ;
-
-// Skip comments
-LINE_COMMENT : '//' ~[\r\n]* '\r'? '\n' -> skip ;
-
-// Separators and Operators
-LPAREN : '(' ;
-RPAREN : ')' ;
-EQUALS : '=' ;
-SEMICO : ';' ;
-ASSIGN : ':=' ;
-LBRACK:  '{' ;
-RBRACK:  '}' ;
-LESSTN:  '<' ;
-GESSTN:  '>' ;
-NOTOPN:  '!' ;
-APPROX:  '~' ;
-OPTION:  '?' ;
-COLON:  ':' ;
-DEQUAL:  '==';
-LEQUAL:  '<=';
-GEQUAL:  '>=';
-NEQUAL:  '!=';
-ANDD:  '&&';
-ORR:   '||';
-INCR: '++';
-DECR: '--';
-ADD: '+';
-MINUS: '-';
-TIMES: '*';
-DIVIDE: '/';
-AND: '&';
-OR: '|';
-EXP: '^';
-PERC: '%';
-DLEFT: '<<';
-RIGHT: '>>';
-QRIGHT: '>>>>';
-PEQUAL: '+=';
-MEQUAL: '-=';
-TEQUAL: '*=';
-SEQUAL: '/=';
-AEQUAL: '&=';
-OEQUAL: '|=';
-EEQUAL: '^=';
-REQUAL: '%=';
-DLEQUAL: '<<=';
-DRQUAL: '>>=';
 
 // §3.10.1 Integer Literals
 
@@ -381,8 +351,59 @@ NullLiteral
 	:	'null'
 	;
 
-//§3.8 Identifiers (must appear after all keywords in the grammar)
+// §3.11 Separators
 
+LPAREN : '(';
+RPAREN : ')';
+LBRACE : '{';
+RBRACE : '}';
+LBRACK : '[';
+RBRACK : ']';
+SEMI : ';';
+COMMA : ',';
+DOT : '.';
+
+// §3.12 Operators
+
+ASSIGN : '=';
+GT : '>';
+LT : '<';
+BANG : '!';
+TILDE : '~';
+QUESTION : '?';
+COLON : ':';
+EQUAL : '==';
+LE : '<=';
+GE : '>=';
+NOTEQUAL : '!=';
+AND : '&&';
+OR : '||';
+INC : '++';
+DEC : '--';
+ADD : '+';
+SUB : '-';
+MUL : '*';
+DIV : '/';
+BITAND : '&';
+BITOR : '|';
+CARET : '^';
+MOD : '%';
+ARROW : '->';
+COLONCOLON : '::';
+
+ADD_ASSIGN : '+=';
+SUB_ASSIGN : '-=';
+MUL_ASSIGN : '*=';
+DIV_ASSIGN : '/=';
+AND_ASSIGN : '&=';
+OR_ASSIGN : '|=';
+XOR_ASSIGN : '^=';
+MOD_ASSIGN : '%=';
+LSHIFT_ASSIGN : '<<=';
+RSHIFT_ASSIGN : '>>=';
+URSHIFT_ASSIGN : '>>>=';
+
+//§3.8 Identifiers (must appear after all keywords in the grammar)
 Identifier
 	:	IdentifierStart IdentifierPart*
 	;
